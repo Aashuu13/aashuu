@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class Restaurant:
     def __init__(self, name, cuisine, rating):
         self.name = name
@@ -124,4 +125,132 @@ empA.company = "NewTech"  # Creates instance variable for empA only
 print("\nAfter changing empA.company:")
 print(f"empA.company: {empA.company}")  # NewTech
 print(f"empB.company: {empB.company}")  # TechCorp (still the class variable)
+=======
+class Restaurant:
+    def __init__(self, name, cuisine, rating):
+        self.name = name
+        self.cuisine = cuisine
+        self.rating = rating
+
+    def serve_food(self):
+        print(f"{self.name} is serving delicious {self.cuisine} food!")
+
+    def get_review(self):
+        print(f"{self.name} has a rating of {self.rating}/5.")
+
+# Creating two restaurant objects
+restaurant1 = Restaurant("Spice Hub", "Indian", 4.5)
+restaurant2 = Restaurant("Sushi World", "Japanese", 4.8)
+
+restaurant1.serve_food()
+restaurant1.get_review()
+
+restaurant2.serve_food()
+restaurant2.get_review()
+
+class Pet:
+    def __init__(self, name, species, energy):
+        self.name = name
+        self.species = species
+        self.energy = energy
+
+    def play(self):
+        self.energy -= 10
+        print(f"{self.name} is playing. Energy now: {self.energy}")
+
+    def sleep(self):
+        self.energy += 20
+        print(f"{self.name} is sleeping. Energy now: {self.energy}")
+
+    def eat(self):
+        self.energy += 15
+        print(f"{self.name} is eating. Energy now: {self.energy}")
+
+# Creating pet objects
+pet1 = Pet("Buddy", "Dog", 50)
+pet2 = Pet("Whiskers", "Cat", 60)
+
+pet1.play()
+pet1.eat()
+pet2.sleep()
+pet2.play()
+
+
+
+class Smartphone:
+    def __init__(self, brand, model, battery_level):
+        self.brand = brand
+        self.model = model
+        self.battery_level = battery_level
+
+    def use_app(self, hours):
+        self.battery_level -= hours * 10
+        print(f"{self.model} used for {hours} hours. Battery now: {self.battery_level}%")
+
+    def charge(self):
+        self.battery_level = 100
+        print(f"{self.model} is fully charged!")
+
+# Creating two smartphone objects
+phone1 = Smartphone("Apple", "iPhone 14", 80)
+phone2 = Smartphone("Samsung", "Galaxy S23", 50)
+
+phone1.use_app(3)
+phone1.charge()
+phone2.use_app(2)
+phone2.charge()
+
+class Employee:
+    company = "TechCorp"      # Class variable
+
+    def __init__(self, name, role):
+        self.name = name       # Instance variable
+        self.role = role       # Instance variable
+
+# Creating three employees
+emp1 = Employee("Alice", "Developer")
+emp2 = Employee("Bob", "Designer")
+emp3 = Employee("Charlie", "Manager")
+
+# Printing company and name
+print(f"{emp1.name} works at {emp1.company}")
+print(f"{emp2.name} works at {emp2.company}")
+print(f"{emp3.name} works at {emp3.company}")
+
+
+class Employee:
+    company = "TechCorp"
+    employee_count = 0       # Class variable to track total employees
+
+    def __init__(self, name, role):
+        self.name = name
+        self.role = role
+        Employee.employee_count += 1  # Increment when new employee is created
+
+# Create three employees
+emp1 = Employee("Alice", "Developer")
+emp2 = Employee("Bob", "Designer")
+emp3 = Employee("Charlie", "Manager")
+
+# Print total employees
+print(f"Total employees: {Employee.employee_count}")
+
+
+
+# Create two employees
+empA = Employee("David", "Intern")
+empB = Employee("Eva", "Analyst")
+
+print("\nBefore changing company via empA:")
+print(f"empA.company: {empA.company}")  # TechCorp
+print(f"empB.company: {empB.company}")  # TechCorp
+print(f"Employee.company: {Employee.company}")  # TechCorp
+
+# Change company through empA
+empA.company = "NewTech"  # Creates instance variable for empA only
+
+print("\nAfter changing empA.company:")
+print(f"empA.company: {empA.company}")  # NewTech
+print(f"empB.company: {empB.company}")  # TechCorp (still the class variable)
+>>>>>>> 3884a84 (add all files)
 print(f"Employee.company: {Employee.company}")  # TechCorp
