@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 class BankAccount:
     def __init__(self, balance=0):
         self.__balance = balance
@@ -70,7 +70,7 @@ class Inventory:
 inventory = Inventory()
 inventory.add_stock("Widget", 100)
 inventory.sell_item("Widget", 30)
-=======
+
 class BankAccount:
     def __init__(self, balance=0):
         self.__balance = balance
@@ -142,5 +142,5 @@ class Inventory:
 inventory = Inventory()
 inventory.add_stock("Widget", 100)
 inventory.sell_item("Widget", 30)
->>>>>>> 3884a84 (add all files)
+
 print(inventory.total_items_in_stock)  # This will print 70

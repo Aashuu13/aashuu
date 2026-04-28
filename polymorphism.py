@@ -1,0 +1,1 @@
+#Create classes Car, Motorcycle, and Truck, each with a honk() method. Loop through a l
